@@ -1,0 +1,58 @@
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: var(--background-color);
+  border-right: 1px solid var(--border-color);
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 24px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100%;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .app-container.sidebar-open .sidebar {
+    left: 0;
+  }
+
+  .sidebar-toggle {
+    display: block;
+  }
+}
+
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 1001;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}

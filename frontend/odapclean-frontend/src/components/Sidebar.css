@@ -1,0 +1,46 @@
+
+.sidebar {
+  width: 280px;
+  background-color: var(--background-color);
+  border-right: 1px solid var(--border-color);
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.folder-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.folder-item {
+  padding: 10px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.folder-item:hover {
+  background-color: #e9f2ff;
+}
+
+.folder-item.selected {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+}

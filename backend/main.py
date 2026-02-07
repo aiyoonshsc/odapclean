@@ -7,6 +7,7 @@ import shutil
 import os
 from dotenv import load_dotenv
 from supabase import create_client, Client
+from supabase.client import ClientOptions
 
 import models
 
@@ -15,7 +16,7 @@ load_dotenv()
 # Supabase 클라이언트 초기화
 url: str = os.environ.get("SUPABASE_URL")
 key: str = os.environ.get("SUPABASE_KEY")
-supabase: Client = create_client(url, key)
+supabase: Client = create_client(url, key, options=ClientOptions(schema="public"))
 
 # 업로드된 이미지를 저장할 디렉토리 (임시)
 UPLOAD_DIR = "uploads"

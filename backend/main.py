@@ -25,12 +25,7 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 app = FastAPI()
 
 # CORS 설정
-origins = [
-    "http://localhost",
-    "http://localhost:3000",
-    "http://localhost:5173",
-    "http://192.168.219.108:5173",
-]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,

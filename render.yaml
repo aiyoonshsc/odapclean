@@ -1,0 +1,25 @@
+services:
+  # Backend Service
+  - type: web
+    name: odapclean-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.0
+      - key: PORT
+        value: 8000
+    
+  # Frontend Service (Optional if using Vercel, but good to have)
+  - type: static
+    name: odapclean-frontend
+    runtime: node
+    rootDir: frontend/odapclean-frontend
+    buildCommand: npm install && npm run build
+    publishDir: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

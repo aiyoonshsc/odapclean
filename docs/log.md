@@ -23,3 +23,9 @@
     - Applied company logo (strawberry icon) to Header, Navbar, and Login page.
     - Optimized logo placement and whitespace.
   - **Code Quality**: Resolved linter warnings (unused variables).
+
+## 2026-02-08 21:40
+- **Deployment Configuration**:
+  - **Render**: Added `render.yaml` and `backend/requirements.txt` to fix deployment error 127 (Command not found).
+    - Explicitly defined Build Command: `pip install -r requirements.txt`
+    - Explicitly defined Start Command: `gunicorn main:app -k uvicorn.workers.UvicornWorker`

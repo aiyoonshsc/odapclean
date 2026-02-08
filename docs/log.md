@@ -29,3 +29,6 @@
   - **Render**: Added `render.yaml` and `backend/requirements.txt` to fix deployment error 127 (Command not found).
     - Explicitly defined Build Command: `pip install -r requirements.txt`
     - Explicitly defined Start Command: `gunicorn main:app -k uvicorn.workers.UvicornWorker`
+  - **Deployment Fix (Round 2)**:
+    - Added `.python-version` (3.11.9) to root and backend to resolve Render build failure (status 1) with default Python 3.13.
+    - Updated `render.yaml` to force Python 3.11.9.

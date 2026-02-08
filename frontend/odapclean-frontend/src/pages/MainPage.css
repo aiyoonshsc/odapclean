@@ -1,120 +1,228 @@
+.main-page {
+  padding: 16px; /* Reduced from 20px for mobile standard */
+  max-width: 600px; /* Limit max width to look more like mobile app */
+  margin: 0 auto;
+  padding-bottom: 80px;
+  background-color: #f8f9fa; /* Light gray background */
+  min-height: 100vh;
+}
 
-.page-container {
+.top-bar {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background: white;
+  padding: 12px 16px;
+  border-radius: 0; /* Full width feeling or minimal radius */
+  box-shadow: none;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-top: -16px;
 }
 
-.card {
-  background-color: var(--background-color);
-  border-radius: 8px;
-  padding: 24px;
-  box-shadow: var(--box-shadow);
-}
-
-.form-container h2,
-.problem-list-container h2 {
-  margin-top: 0;
-  margin-bottom: 16px;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.input-group {
+.folder-selector {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 16px;
+  align-items: center;
+  gap: 12px;
 }
 
-.input-group label {
-  font-weight: 500;
-  color: var(--text-secondary-color);
-}
-
-.input-field,
-.textarea-field {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  font-size: 16px;
-  box-sizing: border-box;
-  transition: border-color 0.2s;
-}
-
-.input-field:focus,
-.textarea-field:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(24, 101, 242, 0.2);
-}
-
-.textarea-field {
-  resize: vertical;
-  min-height: 100px;
-}
-
-.button {
-  padding: 10px 16px;
+.folder-selector select {
+  padding: 8px 0;
   border: none;
-  border-radius: 4px;
-  background-color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.current-folder-label {
+  display: none;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filter-controls::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-select {
+  padding: 6px 12px;
+  border: 1px solid #eee;
+  border-radius: 20px; /* Pill shape */
+  background-color: white;
+  min-width: auto;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.btn-primary {
+  background-color: #FF6B00; /* Orange accent */
   color: white;
-  font-size: 16px;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
   font-weight: 500;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-primary:hover {
+  background-color: #e55a00;
+}
+
+.btn-secondary {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
-.button:hover {
-  background-color: #0056d9;
+.btn-secondary:hover {
+  background-color: #e2e6ea;
 }
 
-.problem-item {
-  border-bottom: 1px solid var(--border-color);
-  padding: 16px 0;
-}
-
-.problem-item:last-child {
-  border-bottom: none;
-}
-
-.problem-item h3 {
-  margin-top: 0;
-  margin-bottom: 8px;
-  font-size: 18px;
-}
-
-.problem-item p {
-  margin: 0;
-  color: var(--text-secondary-color);
-}
-
-.hints-container {
-  margin-top: 12px;
-}
-
-.hints-container h4 {
-  margin: 0 0 8px 0;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text-secondary-color);
-}
-
-.hint-list {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
+.problems-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-direction: column; /* List view style like the image */
+  gap: 16px;
 }
 
-.hint-item {
-  background-color: #e9f2ff;
-  color: #0056d9;
-  padding: 4px 8px;
+.problem-card {
+  background: white;
+  border-radius: 16px; /* More rounded */
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04); /* Very subtle shadow */
+  border: 1px solid #f0f0f0;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.problem-card:active {
+  transform: scale(0.99);
+}
+
+.problem-image {
+  height: 180px;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  position: relative;
+  cursor: pointer;
+}
+
+.problem-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.problem-info {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.problem-info h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222; /* Darker black */
+  line-height: 1.5;
+}
+
+.problem-meta {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #999; /* Lighter gray */
+  font-size: 0.85rem;
+}
+
+.problem-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.problem-actions {
+  padding: 12px 20px;
+  border-top: 1px solid #f8f8f8;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  background-color: white;
+}
+
+.btn-edit, .btn-delete {
+  padding: 6px 12px;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-edit {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.btn-delete {
+  background-color: #fff0f0;
+  color: #ff4d4f;
+}
+
+/* Modal Styles - Keep mostly same but cleaner */
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  border-radius: 16px !important;
+  padding: 24px !important;
+  width: 90% !important;
+  max-width: 500px !important;
+  border: none !important;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.btn-add-problem {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.4);
+  z-index: 900;
 }

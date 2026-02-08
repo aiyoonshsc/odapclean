@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Folder } from '../types';
+import type { Folder } from '../types/definitions';
 import './Sidebar.css';
 
 interface SidebarProps {
@@ -39,8 +39,8 @@ const Sidebar: React.FC<SidebarProps> = ({
         <ul className="folder-list">
           {folders.map((folder) => (
             <li
-              key={folder.id}
-              className={`folder-item ${selectedFolder?.id === folder.id ? 'selected' : ''}`}
+              key={folder.folder_id}
+              className={`folder-item ${selectedFolder?.folder_id === folder.folder_id ? 'selected' : ''}`}
               onClick={() => onSelectFolder(folder)}
             >
               {folder.name}

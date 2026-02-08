@@ -1,0 +1,339 @@
+.problem-page-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.problem-page-container h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.search-bar {
+  margin-bottom: 24px;
+}
+
+.problem-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.problem-input:focus {
+  border-color: #FF6B00;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+}
+
+.create-problem-section {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.create-problem-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #666;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+  background-color: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #FF6B00;
+  outline: none;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Select with Button Styles */
+.select-with-button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.select-with-button select {
+  flex: 1;
+}
+
+.add-button {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 24px;
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.add-button:hover {
+  background-color: #e0e0e0;
+  color: #FF6B00;
+}
+
+.hint-input-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.hint-input-group input {
+  flex: 1;
+}
+
+.btn-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+}
+
+.hint-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hint-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 12px 16px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.delete-hint-btn {
+  background: none;
+  border: none;
+  color: #ff4757;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn-primary {
+  flex: 1;
+  background-color: #FF6B00;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #e66000;
+}
+
+.problem-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.problem-item {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.problem-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.problem-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.problem-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: #333;
+  line-height: 1.4;
+}
+
+.problem-meta {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 16px;
+  background-color: #f8f9fa;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.problem-content {
+  margin-bottom: 16px;
+}
+
+.problem-image {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 12px;
+  object-fit: contain;
+  background-color: #f8f9fa;
+}
+
+.no-image {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.problem-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+  border-top: 1px solid #eee;
+  padding-top: 16px;
+}
+
+.edit-button {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.edit-button:hover {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+}
+
+.delete-button {
+  background-color: #fff;
+  color: #ff4757;
+  border: 1px solid #ffd1d1;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.delete-button:hover {
+  background-color: #fff5f5;
+  border-color: #ff4757;
+}
+
+.toggle-form-button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background-color: #FF6B00;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.toggle-form-button:hover {
+  background-color: #e66000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 107, 0, 0.3);
+}
+
+@media (min-width: 601px) {
+  .problem-page-container {
+    max-width: 800px;
+  }
+}

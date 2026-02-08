@@ -1,0 +1,136 @@
+.curriculum-page-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.curriculum-page-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #363636;
+}
+
+.search-bar {
+  margin-bottom: 2rem;
+}
+
+.curriculum-input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+}
+
+.create-curriculum-section {
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.create-curriculum-section h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.curriculum-list {
+  list-style: none;
+  padding: 0;
+}
+
+.curriculum-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+.curriculum-item:last-child {
+  border-bottom: none;
+}
+
+.curriculum-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.curriculum-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #363636;
+}
+
+.curriculum-meta {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.curriculum-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.delete-button {
+  background-color: #f14668;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #3273dc;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toggle-form-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #48c774;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.toggle-form-button:hover {
+  background-color: #3ec46d;
+}
